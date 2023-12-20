@@ -17,7 +17,7 @@ env:
 
 jobs:
   CI:
-    name: Build and push to private ECR
+    name: Build & push ECR
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
