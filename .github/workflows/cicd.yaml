@@ -1,6 +1,7 @@
 name: Build Image & deploy to Amazon ECS
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -40,6 +41,7 @@ jobs:
   CD:
     name: Deploy
     runs-on: ubuntu-latest
+    needs: [CI]
     steps:
     - name: Checkout
       uses: actions/checkout@v3
